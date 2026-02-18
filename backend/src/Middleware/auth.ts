@@ -9,7 +9,7 @@ export const authMiddleware = (req: Request, res: Response, next: NextFunction) 
         return res.status(403).json({
             message: "Unauthorized"
         });
-    } else {
+    } else { 
         const token = authHeader.split(' ')[1];
         const secret = process.env.JWT_SECRET;
 
